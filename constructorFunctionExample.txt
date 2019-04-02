@@ -1,0 +1,16 @@
+
+// Constructor function example
+
+// *** REMEMBER THAT COSTRUCTUR FUNCTIONS ARE ALWAYS *CAPITALISED*
+// & AND WHEN USING WRITE new "FUNCTION NAME"(...)
+
+function BellBoy (name, age, hasWorkPermit, languages) {
+
+    this.name = name;
+    this.age = age;
+    this.hasWorkPermit = hasWorkPermit;
+    this.languages = languages;
+
+}
+
+var bellBoy1 = new BellBoy("Esteban", 29, false, ["English", "Spanish", "Portugese"])

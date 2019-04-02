@@ -1,0 +1,42 @@
+<%- include("header") -%>
+
+  <!-- Scriplet tags (<% %>) work on a line by line basis and are used around
+   JavaScript inputs as shown below -->
+
+  <!-- <% if (listTitle === "Saturday" || listTitle === "Sunday") {  %>
+      <h1 style="color: purple"><%= listTitle %> ToDo List</h1>
+  <% } else { %>
+    <h1 style="color: blue"><%= listTitle %> ToDo List</h1>
+  <% } %> -->
+
+  <div class="box" id="heading">
+    <h1>
+      <%= listTitle %>
+    </h1>
+  </div>
+
+  <div class="box">
+    <form class="" action="/" method="post">
+      <% for (var i = 0; i < newListItems.length; i++) { %>
+      <div class="item">
+        <input type="checkbox">
+        <p>
+          <%= newListItems[i] %>
+        </p>
+        <% if (listTitle === "Work") { %>
+          <button type="submit" name="btnWork" value="<%= i %>" formaction="/rWorkItem">x</button>
+        <% } else { %>
+          <button type="submit" name="btnItem" value="<%= i %>" formaction="/rItem">x</button>
+        <% } %>
+      </div>
+      <% } %>
+    </form>
+
+    <form class="item" action="/" method="post">
+      <input type="text" name="newItem" placeholder="Add a New Item">
+      <button type="submit" name="list" formaction="/addToList" value=<%= listTitle %>>+</button>
+      <!-- <button type="submit" name="list" formaction="/clearList" value=<%= listTitle %>>Clear List</button> -->
+    </form>
+  </div>
+
+<%- include("footer") -%>

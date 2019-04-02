@@ -1,0 +1,25 @@
+db.products.insert(
+  {
+  _id: 7,
+  name: "Eraser",
+  price: 0.50,
+  stock: 43,
+  reviews: [
+    {
+    authorName: "Sally",
+    rating: 5,
+    review: "Best rubber ever!"
+    },
+    {
+    authorName: "John",
+    rating: 5,
+    review: "Awesome rubber!"
+    },
+    {
+    authorName: "Ben",
+    rating: 3,
+    review: "Just a rubber."
+    }
+  ]
+  }
+)
